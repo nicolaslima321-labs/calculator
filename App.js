@@ -12,7 +12,12 @@ export default class App extends Component {
   }
 
   addDigit = (number) => {
-    this.state.displayValue == 0 ? number = (parseInt(number) + parseInt(this.state.displayValue)) : number += this.state.displayValue;    
+    if (number == "." && this.state.displayValue == 0)
+      return
+    if (number == "." && this.state.displayValue.includes("."))
+      return
+
+    this.state.displayValue == 0 ? number = (parseInt(number) + parseInt(this.state.displayValue)) : number = this.state.displayValue + number;    
     this.setState({ displayValue: number })
   }
 
