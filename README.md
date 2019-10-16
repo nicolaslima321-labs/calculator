@@ -16,4 +16,4 @@ With a emulator or device connected `react-native run-android` or `react-native 
 
 ##
 
-It must works :)
+It must works! :)
